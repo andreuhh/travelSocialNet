@@ -30,10 +30,18 @@
     transition: all 0.2s;
     margin-right: -3.25rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+      width: 80%;
+    }
+
     &:focus {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
+
+      @media only screen and (max-width: $bp-smallest) {
+        width: 90%;
+      }
     }
 
     &::-webkit-input-placeholder {
