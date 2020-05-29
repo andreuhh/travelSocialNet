@@ -14,6 +14,11 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -124,15 +129,28 @@
 //////////////////////////////////
 // SIDE NAVIGATION
 .side-nav {
-  font-size: 5.5rem;
+  font-size: 1.5rem;
   list-style: none;
   margin-top: 3.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
 
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+       margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -171,6 +189,16 @@
 
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+     }
+
+     @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem .5rem;
+    }
   }
 
   &__icon {
@@ -178,6 +206,13 @@
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; // it's the color of parent element
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -188,6 +223,10 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 //////////////////////////////////
@@ -204,16 +243,22 @@
 //////////////////////////////////
 // HOTEL OVERVIEW
 .overview {
+  color: #333;
   display: flex;
   align-items: center;
   border-bottom: var(--line);
   
   &__heading {
-    font-size: 2.25rem;
+    font-size: 1.50rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -229,7 +274,7 @@
   }
 
   &__location {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: flex;
     vertical-align: center;
   }
@@ -249,16 +294,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: 1.2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: .5rem;
+    }
   }
 }
 
@@ -320,13 +377,13 @@
 // PARAGRAPH
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+ 
 }
 
 //////////////////////////////////
 // LIST
 .list {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   list-style: none;
   margin: 3rem 0;
   padding: 3rem 0;
@@ -363,7 +420,7 @@
 //////////////////////////////////
 // RECOMAND
 .recommend {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: var(--color-grey-dark-3);
 
   display: flex;
@@ -374,7 +431,7 @@
   }
 
   &__friends {
-
+    display: flex;
   }
 
   &__photo {
@@ -398,8 +455,13 @@
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -462,19 +524,23 @@
   padding: 3.5rem;
   text-align: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
+
     &__book-now {
-      color: black;
+      
       font-size: 1.5rem;
       font-weight: 300;
       text-transform: uppercase;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 }
 
 //////////////////////////////////
 // button
 .btn{
-  font-size: 2.2rem;
+  
   font-weight: 300;
   border: none;
   text-transform: uppercase;
