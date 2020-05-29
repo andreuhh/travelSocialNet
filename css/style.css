@@ -95,7 +95,7 @@ body {
       flex-direction: column; } }
 
 .description {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -474,6 +474,7 @@ body {
     .cta {
       padding: 2.5rem 0; } }
   .cta__book-now {
+    color: #333;
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;

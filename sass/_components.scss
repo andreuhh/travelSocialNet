@@ -385,7 +385,6 @@
 // PARAGRAPH
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
- 
 }
 
 //////////////////////////////////
@@ -537,7 +536,7 @@
   }
 
     &__book-now {
-      
+      color: #333;
       font-size: 1.5rem;
       font-weight: 300;
       text-transform: uppercase;
